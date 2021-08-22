@@ -1,0 +1,10 @@
+:root {
+  // for header
+  --input-radius: 5px;
+  --btn-width: 40px;
+  --input-width: calc(var(--btn-width) * 10);
+  --border: 2px;
+
+  // for grid
+  --grid-size: 30px;
+}

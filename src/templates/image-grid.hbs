@@ -1,0 +1,28 @@
+<div class="image-card">
+        <a href="{{largeImageURL}}" class="image-card__link">
+            <img 
+            class="image-card__image" 
+            src="{{webformatURL}}"
+            srcset="{{webformatURL}} 1x, {{largeImageURL}} 2x"  
+            alt="{{tags}}" 
+            loading="lazy"/>
+        </a>
+        <div class="image-card__info">
+            <p class="stats-item">
+                <i class="material-icons">thumb_up</i>
+                {{likes}}
+            </p>
+            <p class="stats-item">
+                <i class="material-icons">visibility</i>
+                {{views}}
+            </p>
+            <p class="stats-item">
+                <i class="material-icons">comment</i>
+                {{comments}}
+            </p>
+            <p class="stats-item">
+                <i class="material-icons">cloud_download</i>
+                {{downloads}}
+            </p>
+        </div>
+</div>

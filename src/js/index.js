@@ -82,3 +82,9 @@ const refresh = () => {
     pageHeight = document.documentElement.scrollHeight;
     gallery = null;
 };
+
+// refs.btnScrollTop.addEventListener('click', scrollTop);
+
+// function scrollTop() {
+//   refs.searchForm.scrollIntoView({});
+// }

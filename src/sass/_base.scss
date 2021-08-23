@@ -1,15 +1,22 @@
-ul,
+html {
+  scroll-behavior: smooth;
+}
+
+.link {
+  text-decoration: none;
+  display: inline-block;
+}
+
 li {
   list-style-type: none;
 }
 
-p,
-i {
+p {
   margin: 1px;
 }
 
 body {
   text-align: center;
-  background: linear-gradient(to left, #0c54d1, #031435);
-  color: aliceblue;
+  background: linear-gradient(to left, #ffffff, rgb(2, 28, 46));
+  color: rgb(255, 255, 255);
 }

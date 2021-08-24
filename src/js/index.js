@@ -88,3 +88,11 @@ const refresh = () => {
 // function scrollTop() {
 //   refs.searchForm.scrollIntoView({});
 // }
+
+// function scrollTop() {
+// refs.upButton.classList.remove('isActive');
+//     refs.searchForm.scrollIntoView({
+//         behavior: 'smooth',
+//         block: 'end',
+//     });
+// }

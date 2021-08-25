@@ -1,8 +1,40 @@
-export const API_KEY = '23036678-74019fd4c7410c35bfdd6c3b0';
-export const API_URL = 'https://pixabay.com/api/';
-export let HREF = document.URL.split('?');
-if (HREF[1]) {
-    let string = decodeURI(HREF[1].split('=')[1]).trim();
-    HREF[1] = string.split('#')[0];
-    HREF[2] = HREF[1].split('+').join(' ');
+import axios from 'axios';
+
+axios.defaults.baseURL = 'https://pixabay.com/api/';
+axios.defaults.params = { key: '23036678-74019fd4c7410c35bfdd6c3b0' };
+
+export default class PixabyApi {
+  #query;
+  #page;
+  constructor() {
+    this.#query = '';
+    this.#page = 1;
+    this.perPage = 12;
+  }
+
+  async getPhotos() {
+    const { data } = await axios.get(
+      `?image_type=photo&orientation=horizontal&q=${this.#query}&page=${this.#page}&per_page=${
+        this.perPage}`,
+    );
+    this.incrementPage();
+    return data;
+  }
+
+  get query() {
+    return this.#query;
+  }
+
+  set query(newQuery) {
+    this.#query = newQuery;
+    this.#page = 1;
+  }
+
+  incrementPage(value = 1) {
+    this.#page += value;
+  }
+
+  decrementPage(value = 1) {
+    this.#page -= value;
+  }
 }
